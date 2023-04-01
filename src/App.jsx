@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 import Posts from './components/Posts';
+import Post from "./components/Post";
 
 const queryClient = new QueryClient();
 
@@ -14,7 +15,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <div className="App">
         {postId > -1 ? (
-          <p>Post Id</p>
+          <Post postId={postId} setPostId={setPostId} />
         ) : (
           <Posts setPostId={setPostId} />
         )}
