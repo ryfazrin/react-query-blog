@@ -27,7 +27,7 @@ function Posts({ setPostId }) {
           <div>
             {data.map((post) => (
               <p key={post.id}>
-                <a onClick={() => usePosts(post.id)} href="#">{post.title}</a>
+                <a onClick={() => setPostId(post.id)} href="#">{post.title}</a>
               </p>
             ))}
           </div>
